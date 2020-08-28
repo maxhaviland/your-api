@@ -1,10 +1,6 @@
 const elements = {
-  container: document.querySelector('.container'),
   textAPI: document.getElementById('api'),
-  line: document.getElementById('line'),
 };
-
-const { container, textAPI, line } = elements;
 
 const interval = 5000;
 
@@ -21,6 +17,6 @@ const stringRGB = () => {
   return `rgb(${[red, green, blue]})`;
 }
 
-const changeColor = () => textAPI.style.color = stringRGB();
+const changeColor = () => elements.textAPI.style.color = stringRGB();
 
 setInterval(changeColor, interval);
